@@ -9,6 +9,7 @@ import discord
 import os
 from discord.ext import commands
 bot = commands.Bot(command_prefix='!')
+client = discord.Client()
 
 @bot.event
 async def on_ready():
