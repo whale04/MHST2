@@ -5,11 +5,11 @@
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+import discord
 import os
 from discord.ext import commands
 bot = commands.Bot(command_prefix='!')
-access_token = os.environ["token"]
-TOKEN = 'access_token'
+
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game('몬스2중'))
@@ -142,9 +142,9 @@ X("황구조 티가렉스","파워, 분노 시 스피드")
 X("금뢰공진오우거","파워, 대전 시 스피드, 분노 시 테크닉(진대전 사용시 벌레부르거나 낙뢰씀, 분노하면 중뇌광충탄")
 
 
+access_token = os.environ['BOT_TOKEN']
 
-
-bot.run(TOKEN)
+bot.run(access_token)
 
 
 
