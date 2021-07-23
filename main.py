@@ -5,10 +5,11 @@
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-import discord
+import os
 from discord.ext import commands
 bot = commands.Bot(command_prefix='!')
-TOKEN = 'ODY4MTMzMzg5Nzg0NDc3NzQ2.YPrOOQ._09ubLO3Ns3xYBBFDXyV48dp4Wc'
+access_token = os.environ["token"]
+TOKEN = 'access_token'
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game('몬스2중'))
